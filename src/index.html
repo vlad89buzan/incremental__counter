@@ -402,17 +402,17 @@
 			<div class="counter animItems">
 				<div class="counter__item">
 					<i class="fab fa-twitter "></i>
-					<div data-target="12000" class="counter__number">0</div>
+					<div data-target="12012" class="counter__number">0</div>
 					<p class="counter__description">Twitter Folowers</p>
 				</div>
 				<div class="counter__item">
 					<i class="fab fa-youtube "></i>
-					<div data-target="5000" class="counter__number">0</div>
+					<div data-target="5555" class="counter__number">0</div>
 					<p class="counter__description">Youtube Subscribers</p>
 				</div>
 				<div class="counter__item">
 					<i class="fab fa-facebook "></i>
-					<div data-target="7500" class="counter__number">0</div>
+					<div data-target="7555" class="counter__number">0</div>
 					<p class="counter__description">Facebook Fans</p>
 				</div>
 
@@ -489,11 +489,11 @@
 				const updateCounter = () => {
 					const target = +counter.getAttribute('data-target');
 					const c = +counter.innerText;
-					const increment = target / 100;
+					const increment = target / 23;
 
 					if (c < target) {
 						counter.innerText = `${Math.ceil(c + increment)}`;
-						setTimeout(updateCounter, 20);
+						setTimeout(updateCounter, 100);
 						console.log(counter.innerText);
 					} else {
 						counter.innerText = target;
