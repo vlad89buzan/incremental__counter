@@ -1,0 +1,67 @@
+@import "normalize";
+@import "var";
+// @import "fonts";
+//@import "mixins";
+// @import 'blocks/header';
+
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  font-family: Geneva, Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  background-color: #8e44ad;
+  color: white;
+}
+
+.wrapper {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+ 
+}
+
+main {
+  flex: 1 1 100%;
+  position: relative;
+}
+.counter {
+  
+  display: flex;
+  flex-direction: column;
+  row-gap: 50px;
+  justify-content: space-between;
+  @media screen and (min-width:768px) {
+    flex-direction: row;
+  }
+  max-width: 1024px;
+  margin: 20px auto;
+  padding: 20px 100px;
+  
+
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+  }
+i{
+  font-size: 60px;
+}
+  &__number {
+    font-size: 30px;
+  }
+
+  &__description {
+    font-size: 20px;
+    text-align: center;
+  }
+}
+
+
+
