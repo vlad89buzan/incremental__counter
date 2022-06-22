@@ -422,7 +422,7 @@
 				</div>
 
 			</div>
-		
+
 
 
 		</main>
@@ -431,7 +431,7 @@
 	<script>
 		let animItems = document.querySelectorAll('.animItems');
 		let wascounted = 0;
-		
+
 		startAnimation();
 		function startAnimation() {
 			if (animItems.length > 0) {
@@ -480,10 +480,10 @@
 			}
 		}
 
-		checkIsActive()
+		
 		function checkIsActive() {
 
-			if (document.querySelector('.counter').classList.contains('active')&&wascounted == 0) {
+			if (document.querySelector('.counter').classList.contains('active') && wascounted == 0) {
 				counter('.counter__number');
 			}
 		}
@@ -498,11 +498,11 @@
 
 					if (c < target) {
 						counter.innerText = `${Math.ceil(c + increment)}`;
-						setTimeout(updateCounter, 20)
-						console.log(counter.innerText)
+						setTimeout(updateCounter, 20);
+						console.log(counter.innerText);
 					} else {
 						counter.innerText = target;
-						wascounted=1;
+						wascounted = 1;
 					}
 
 				}
