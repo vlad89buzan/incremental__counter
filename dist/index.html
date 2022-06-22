@@ -430,6 +430,7 @@
 	</div>
 	<script>
 		let animItems = document.querySelectorAll('.animItems');
+		let wascounted = 0;
 		
 		startAnimation();
 		function startAnimation() {
@@ -482,7 +483,7 @@
 		checkIsActive()
 		function checkIsActive() {
 
-			if (document.querySelector('.counter').classList.contains('active')) {
+			if (document.querySelector('.counter').classList.contains('active')&&wascounted == 0) {
 				counter('.counter__number');
 			}
 		}
@@ -493,17 +494,15 @@
 				const updateCounter = () => {
 					const target = +counter.getAttribute('data-target');
 					const c = +counter.innerText;
-					const increment = target / 200;
+					const increment = target / 100;
 
 					if (c < target) {
 						counter.innerText = `${Math.ceil(c + increment)}`;
-						setTimeout(updateCounter, 10)
+						setTimeout(updateCounter, 20)
 						console.log(counter.innerText)
 					} else {
 						counter.innerText = target;
-						
-						console.log(animItems);
-						animItems='';
+						wascounted=1;
 					}
 
 				}
